@@ -38,10 +38,11 @@
 				<td><input name="email"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"></td>
-				<input type="submit" value="회원가입">&emsp;
-				<input type="reset">
-			</tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="회원가입" onclick="inputCheck();">&emsp;
+                    <input type="reset">
+                </td>
+            </tr>
 		</form>
 	</table>
 
