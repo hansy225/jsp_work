@@ -27,6 +27,7 @@ public class Bean {
 		this.location_id = location_id;
 	}
 	
+	
 	public String getJob_code() {
 		return job_code;
 	}
