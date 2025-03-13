@@ -27,14 +27,14 @@
 		<hr>
 		
 		<h4 class="m30">설문 리스트</h4>
-		<table class="table">
+		<table class="table table-success">
 			<tr>
 				<th>번호</th>
 				<th>제목</th>
 				<th>시작일 ~ 종료일</th>
 			</tr>
 			<tr>
-				<td colspan="3"><button type="button" onclick="location.href='voteInsert.jsp'">설문 작성하기</button></td>
+				<td colspan="3" align="right"><button type="button" onclick="location.href='voteInsert.jsp'">설문 작성하기</button></td>
 			</tr>
 		</table>
 	</div>

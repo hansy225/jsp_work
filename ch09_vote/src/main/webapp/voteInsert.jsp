@@ -26,7 +26,7 @@
 		<h5 class="m30">설문 작성</h5>
 		<hr>
 		<form action="voteInsertProc.jsp" method="post">
-			<table class="table">
+			<table class="table table-success">
 				<tr>
 					<td width="20%">질문</td>
 					<td colspan="2">q: <input name="question" size="52"></td>
