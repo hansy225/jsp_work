@@ -35,8 +35,8 @@
 					<td rowspan="6">항목</td>
 					<%
 						for(int i=1; i<=4; i++) {
-							out.print("<td>" + (i*2-1) + " :<input name='item'></td>");
-							out.print("<td>" + (i*2) + " :<input name='item'></td>");
+							out.print("<td>" + (i*2-1) + " : <input name='item'></td>");
+							out.print("<td>" + (i*2) + " : <input name='item'></td>");
 							out.print("</tr>");
 							if(i<4) {
 								out.print("<tr>");

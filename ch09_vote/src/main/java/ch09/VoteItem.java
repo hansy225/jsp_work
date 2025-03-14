@@ -6,7 +6,19 @@ public class VoteItem {
 	private int listnum;
 	private int itemnum;
 	private String[] item;
+	private int count;
 	
+	public VoteItem() {
+	}
+
+	public VoteItem(int listnum, int itemnum, String[] item, int count) {
+		super();
+		this.listnum = listnum;
+		this.itemnum = itemnum;
+		this.item = item;
+		this.count = count;
+	}
+
 	public int getListnum() {
 		return listnum;
 	}
@@ -39,22 +51,9 @@ public class VoteItem {
 		this.count = count;
 	}
 
-	private int count;
-	
-	public VoteItem() { }
-
-	public VoteItem(int listnum, int itemnum, String[] item, int count) {
-		super();
-		this.listnum = listnum;
-		this.itemnum = itemnum;
-		this.item = item;
-		this.count = count;
-	}
-
 	@Override
 	public String toString() {
 		return "VoteItem [listnum=" + listnum + ", itemnum=" + itemnum + ", item=" + Arrays.toString(item) + ", count="
 				+ count + "]";
 	}
-	
 }
