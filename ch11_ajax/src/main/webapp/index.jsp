@@ -32,10 +32,10 @@
 		  	<br><br>
 		  	
 		  * 비동기식의 단점<br>
-		  - 현재 페이지에 지속적으로 리소스가 쌓임 => 페이지가 느려질 수 있음<br>
-		  - 에러 발싱새 디버깅 어려움<br>
-		  - 요청 처리 후에 돌아온 응답데이터를 가지고 현재페이지에 새로운 요소를 만들어서 보여줘야 됨 
-		  	=> dom요소들을 새롭게 만들어내는 구문을 알아야 됨
+		   - 현재 페이지에 지속적으로 리소스가 쌓임 => 페이지가 느려질 수 있음<br>
+		   - 에러 발싱새 디버깅 어려움<br>
+		   - 요청 처리 후에 돌아온 응답데이터를 가지고 현재페이지에 새로운 요소를 만들어서 보여줘야 됨 
+		  	 => dom요소들을 새롭게 만들어내는 구문을 알아야 됨
 		  <br><br>
 		  
 		  * AJAX 구현 방식 : JavaScript 방식 / jQuery방식(코드 간결하고 사용하기 쉬움)	
@@ -44,41 +44,41 @@
 	<pre>
 	* jQuery방식으로 AJAX통신
 	
-	$.ajax({
-		속성명:속성값,
-		속성명:속성값,
-		속성명:속성값,
-		...
-	});
+		$.ajax({
+			속성명:속성값,
+			속성명:속성값,
+			속성명:속성값,
+			...
+		});
 	
 	* 주요속성
-	- url : 요청할 url(필수 속성)
-	- type|method : 요청전송방식(get(defalut) / post)
-	- data : 요청시 전달할 값
-	- success : ajax 통신이 성공했을 때 실행할 함수 정의
-	- error : ajax 통신이 실패했을 때 실행할 함수 정의
-	- complete : ajax 통신의 성공과 실패에 상관없이 무조건 실행할 함수 정의
+		- url : 요청할 url(필수 속성)
+		- type|method : 요청전송방식(get(defalut) / post)
+		- data : 요청시 전달할 값
+		- success : ajax 통신이 성공했을 때 실행할 함수 정의
+		- error : ajax 통신이 실패했을 때 실행할 함수 정의
+		- complete : ajax 통신의 성공과 실패에 상관없이 무조건 실행할 함수 정의
 	
 	* 부수적인속성
-	- async : 서버와의 비동기 처리 방식 설정 여부(기본값 true:비동기)
-	- contentType : request의 데이터 인코딩 방식 정의(보내는 측의 데이터 인코딩)
-	- dataType : 서버에서 response로 오는 데이터의 데이터 형 설정, 값이 없다면 스마트하게 판단함
-				xml - 트리 형태의 데이터 구조
-				json - 맵 형식의 데이터 구조(일반적인 데이터 구조)
-				script - javascript 및 일반 String 형태 데이터
-				html - html 태그 자체를 return 하는 방식
-				text - String 데이터
-	- accept : 파라미터의 타입을 설정 (사용자 특화 된 파라미터 타입 설정 가능)
-	- beforesend : ajax 요청을 하기 전 실행되는 이벤트 callback 함수 (데이터 가공 및 header 관련 설정)
-	- cache : 요청 및 결과값을 scope에서 갖고 있지 않도록 하는 것 (기본값 true)
-	- contents : JQuery에서 response의 데이터를 파싱하는 방식 정의
-	- context : ajax 메소드 내 모든 영역에서 파싱 방식 정의
-	- crossDomain : 타 도메인 호출 가능 여부 설정(기본값 false)
-	- dataFilter : response를 받았을 때 정상적인 값을 return 할 수 있도록 데이터와 데이터 타입 설정
-	- global : 기본 이벤트 사용 여부(ajaxstart, ajaxstop) (버퍼링 같이 시작과 끝을 나타낼 때, 선처리 작업)
-	- password : 서버에 접속 권한(비밀번호)이 필요한 경우
-	- processData : 서버로 보내는 값에 대한 형태 설정 여부(기본 데이터를 원하는 경우 false설정)
-	- timeout : 서버 요청 시 응답 대기 시간(milisecond)
+		- async : 서버와의 비동기 처리 방식 설정 여부(기본값 true:비동기)
+		- contentType : request의 데이터 인코딩 방식 정의(보내는 측의 데이터 인코딩)
+		- dataType : 서버에서 response로 오는 데이터의 데이터 형 설정, 값이 없다면 스마트하게 판단함
+					xml - 트리 형태의 데이터 구조
+					json - 맵 형식의 데이터 구조(일반적인 데이터 구조)
+					script - javascript 및 일반 String 형태 데이터
+					html - html 태그 자체를 return 하는 방식
+					text - String 데이터
+		- accept : 파라미터의 타입을 설정 (사용자 특화 된 파라미터 타입 설정 가능)
+		- beforesend : ajax 요청을 하기 전 실행되는 이벤트 callback 함수 (데이터 가공 및 header 관련 설정)
+		- cache : 요청 및 결과값을 scope에서 갖고 있지 않도록 하는 것 (기본값 true)
+		- contents : JQuery에서 response의 데이터를 파싱하는 방식 정의
+		- context : ajax 메소드 내 모든 영역에서 파싱 방식 정의
+		- crossDomain : 타 도메인 호출 가능 여부 설정(기본값 false)
+		- dataFilter : response를 받았을 때 정상적인 값을 return 할 수 있도록 데이터와 데이터 타입 설정
+		- global : 기본 이벤트 사용 여부(ajaxstart, ajaxstop) (버퍼링 같이 시작과 끝을 나타낼 때, 선처리 작업)
+		- password : 서버에 접속 권한(비밀번호)이 필요한 경우
+		- processData : 서버로 보내는 값에 대한 형태 설정 여부(기본 데이터를 원하는 경우 false설정)
+		- timeout : 서버 요청 시 응답 대기 시간(milisecond)
 	</pre>
 	
 	<h1>jQuery방식을 이용한 AJAX 테스트</h1>
@@ -88,8 +88,9 @@
 	입력 : <input type="text" id="input1">&emsp;<input type="button" id="btn1" value="전송">
 	<br>
 	
-	응답 : <span id="output1">현재응답없음</span>
+	응답 : <span id="output1">현재응답없음</span> <p/>
 
+	<!-- 버튼을 클릭하면 id 체크하기
 	<script type="text/javascript">
 		$(() => {
 			$("#btn1").click(function() {
@@ -109,30 +110,26 @@
 		})
 	</script>
 	
-	<br><br>
-	
-	<!-- // 버튼을 클릭하면 id체크하기
 	<form action="idCheck.me">
-		ID : <input name="id" id="id">&emsp;<input type="button" value="ID중복확인" id="btn2"><br>
+		ID : <input name="id" id="id">&emsp;<input type="button" value="id 중복확인" id="btn2"> <p/>
 		<input type="submit" value="회원가입" disabled>
 	</form>
 	
 	<script type="text/javascript">
 		$(() => {
 			$("#btn2").click(function() {
-				let $idInput = $("input[name=id]")
-				// let $idInput = $("#id");
+				let $idInput = $("input[name=id]");
+				// let $idInput = $("id");
 				$.ajax({
 					url : "idCheck.me",
 					data : {checkId : $idInput.val()},
 					success : function(result) {
 						console.log(result);
 						if(result == 'idN') {
-							alert("이미 사용중이거나 탈퇴한 아이디 입니다.");
-							$idInput.val("");
+							alert("이미 사용중이거나 탈퇴한 아이디입니다.");
 							$idInput.focus();
 						} else {
-							if(confirm("사용 가능한 아이디 입니다. 사용하시겠습니까?")) {
+							if(confirm("사용 가능한 아이디입니다. 사용하시겠습니까 ?")) {
 								$("form :submit").removeAttr("disabled");
 								$idInput.attr("readonly", true);
 							} else {
@@ -142,90 +139,90 @@
 						}
 					},
 					error : function() {
-						console.log("아이디 중복체크용 ajax통신실패");
+						console.log("id 중복체크용 ajax 통신 실패");
+					}
+				})
+			})
+		});
+	</script>
+	-->
+	
+	<!-- id input에 넣으면 바로바로 쓸 수 있는지 나타내주기 -->
+	<form action="idCheck.me" id="enrollFrom">
+		<p>ID : <input name="id" id="id"></p>
+		<div id="checkResult" style="font-size: 0.8em; display: none"></div>
+		<input type="submit" value="회원가입"> &emsp;
+		<input type="reset" value="초기화">
+	</form>
+	
+	<script>
+		$(() => {
+			const $idInput = $("#id");
+			$idInput.keyup(function() {
+				console.log($idInput.val());
+				
+				// 최소 3글자 이상 입력되었을때만 ajax 요청을 중복체크
+				if($idInput.val().length >= 3) {
+					$.ajax({
+						url : "idCheck.me",
+						data : {checkId : $idInput.val()},
+						success : function(result) {
+							if(result == "idN") {
+								$('#checkResult').show();
+								$('#checkResult').css("color", "red").text("중복된 아이디입니다. 다시 입력하세요.");
+								$('#enrollFrom :submit').attr("disabled", true);
+							} else {
+								$('#checkResult').show();
+								$('#checkResult').css("color", "green").text("사용가능한 아이디입니다.");
+								$('#enrollFrom :submit').attr("disabled", false);
+							}
+						},
+						error : function() {
+							console.log("id 중복체크용 ajax 통신 실패");
+						}
+					})
+				} else {
+					$('#enrollFrom :submit').attr("disabled", true);
+				}
+			})
+		})
+	</script>
+	
+	<br><br>
+	
+	<h3>2. 버튼 클릭 시 post 방식으로 서버에 여러 개의 데이터 전송 및 응답</h3>
+	
+	이름 : <input id="name"> <br>
+	나이 : <input type="number" id="age"> &emsp;
+	<input type="button" id="btn3" value="전송"> <br>
+	
+	<!-- 서블릿 v1, v2 실행 시 모두 하나의 문자열로 받음
+	응답 - <label id="output3"></label>
+	
+	<script>
+		$(() => {
+			$('#btn3').click(function() {
+				$.ajax({
+					url : "ajax3.do",
+					data : {
+						name : $('#name').val(),
+						age : $('#age').val()
+					},
+					type : "post",
+					success : function(result) {
+						console.log(result);
+						// v1과 v2 모두 하나의 문자열로 들어옴
+						$('#output3').text(result);
+					},
+					error : function(result) {
+						console.log("ajax 통신 실패");
 					}
 				})
 			})
 		})
-	</script>
-	 -->
-	 
-	 <!-- id input에 넣으면 바로바로 쓸 수 있는지 나타내줌 -->
-	 <form action="idCheck.me" id="enrollFrom">
-	 	<p>ID : <input name="id" id="id"></p>
-	 	<div id="checkResult" style="font-size:0.8em; display:none"></div>
-	 	<input type="submit" value="회원가입">&emsp;
-	 	<input type="reset" value="초기화">
-	 </form>
-	 
-	 <script>
-	 $(() => {
-		 const $idInput = $("#id");
-		 $idInput.keyup(function() {
-			 console.log($idInput.val());
-			 
-			 // 최소 3글자 이상 입력되었을때만 ajax요청올 중복체크
-			 if($idInput.val().length >= 3) {
-				 $.ajax({
-					url : "idCheck.me",
-				 	data : {checkId : $idInput.val()},
-				 	success : function(result) {
-				 		if(result == "idN") {
-				 			$('#checkResult').show();
-				 			$('#checkResult').css("color", "red").text("중복된 아이디 입니다. 다시 입력하세요.");
-				 			$('#enrollFrom :submit').attr("disabled", true);
-				 		} else {
-				 			$('#checkResult').show();
-				 			$('#checkResult').css("color", "green").text("멋진 아이디네요");
-				 			$('#enrollFrom :submit').attr("disabled", false);
-				 		}
-				 	},
-				 	error : function() {
-				 		console.log("아이디 중복체크용 ajax통신실패");
-				 	}
-				 })
-				 
-			 } else {
-				 $('#enrollFrom :submit').attr("disabled", true);
-			 }
-		 })
-	 })
-	 </script>
-	 
-	 <br><br>
-	 
-	 <h3>2. 버튼 클릭시 post 방식으로 서버에 여러개의 데이터 전송 및 응답</h3>
-	 이름 : <input id="name"><br>
-	 나이 : <input type="number" id="age"><br>
-	 <input type="button" id="btn3" value="전송"><br>
-	 
-<!-- 서블릿의 v1, v2실행시 모두 하나의 문자열로 받음
-	 응답 : <label id="output3"></label>
-	 
-	 <script>
-	 	$(() => {
-	 		$('#btn3').click(function() {
-	 			$.ajax({
-	 				url : "ajax3.do",
-	 				data : {
-	 					name : $('#name').val(),
-	 					age : $('#age').val()
-	 				},
-	 				type : "post",
-	 				success : function(result) {
-	 					console.log(result);
-	 					// v1과 v2는 모두 하나의 문자열로 들어옴
-	 					$('#output3').text(result);
-	 				},
-	 				error : function() {
-	 					console.log("ajax통신 실패");
-	 				}
-	 			})
-	 		})
-	 	})
-	 </script>
-	  -->
-	 
+	</script> 
+	-->
+	
 	 <!-- 서블릿의 v3, v4에서 배열이나 객체로 반환 -->
 	 응답 : <ul id="output3">
 	 </ul>
@@ -271,13 +268,37 @@
 	 })
 	 </script>
 	 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	 <br><br>
+	 
+	 <h3>3. 서버에 데이터를 전송한 후 조회된 bean 객체를 응답 데이터로 받을 때</h3>
+	 
+	 검색하고자 하는 회원번호 ID : <input id="input4">	
+	 <input type="button" id="btn4" value="전송"> <p/>
+	 
+	 <div id="output4"></div>
+	 
+	 <script>
+	 	$(() => {
+	 		$('btn4').click(function() {
+	 			$.ajax({
+	 				url : "ajax4.do",
+	 				data : {id: $('#input4').val()},
+	 				success : function() {
+	 					console.log(result);
+	 					const value = "******** 검색 결과 ******** <br>"
+	 								+ "ID : " + result.userId + "<br>"
+	 								+ "이름 : " + result.userName + "<br>"
+	 								+ "성별 : " + result.userGender + "<br>"
+	 								+ "email : " + result.userEmail + "<br>";
+	 					$('#output4').html(value);
+	 				},
+	 				error : function() {
+	 					console.log("ajax통신 실패");
+	 				}
+	 			})
+	 		})
+	 	})
+	 </script>
+	
 </body>
 </html>
-
-
-
-
-
-
-

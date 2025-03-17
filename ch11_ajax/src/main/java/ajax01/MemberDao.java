@@ -65,5 +65,35 @@ public class MemberDao {
 		}
 		return flag;
 	}
+
+	public Member getMember(String id) {
+        Member member = null;
+        try {
+            con = pool.getConnection();
+            sql = "select * from member where id=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, id);
+            rs = pstmt.executeQuery();
+            
+            if (rs.next()) {
+                member = new Member();
+                member.setId(rs.getString("id"));
+                member.setPwd(rs.getString("pwd"));
+                member.setName(rs.getString("name"));
+                member.setGender(rs.getString("gender"));
+                member.setBirthday(rs.getString("birthday"));
+                member.setEmail(rs.getString("email"));
+                member.setZipcode(rs.getString("zipcode"));
+                member.setAddress(rs.getString("address"));
+                member.setDetail_address(rs.getString("detail_address"));
+                member.setHobby(rs.getString("hobby").split(" "));  // Assuming hobbies are stored as space-separated strings
+                member.setJob(rs.getString("job"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return member;
+    }
+
 	
 }
