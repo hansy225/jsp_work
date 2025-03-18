@@ -41,12 +41,42 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>AjaxServletContrller4</display-name>
-    <servlet-name>AjaxServletContrller4</servlet-name>
-    <servlet-class>ajax01.AjaxServletContrller4</servlet-class>
+    <display-name>AjaxServletController4</display-name>
+    <servlet-name>AjaxServletController4</servlet-name>
+    <servlet-class>ajax01.AjaxServletController4</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AjaxServletContrller4</servlet-name>
+    <servlet-name>AjaxServletController4</servlet-name>
     <url-pattern>/ajax4.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjaxServletController5</display-name>
+    <servlet-name>AjaxServletController5</servlet-name>
+    <servlet-class>ajax01.AjaxServletController5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxServletController5</servlet-name>
+    <url-pattern>/ajax5.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjaxServletreplyList</display-name>
+    <servlet-name>AjaxServletreplyList</servlet-name>
+    <servlet-class>ajaxReply.AjaxServletreplyList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxServletreplyList</servlet-name>
+    <url-pattern>/ajaxReply/rlist.bo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjaxServletReplyInsert</display-name>
+    <servlet-name>AjaxServletReplyInsert</servlet-name>
+    <servlet-class>ajajReply.AjaxServletReplyInsert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxServletReplyInsert</servlet-name>
+    <url-pattern>/ajaxReply/rInsert.bo</url-pattern>
   </servlet-mapping>
 </web-app>
