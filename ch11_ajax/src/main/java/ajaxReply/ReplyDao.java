@@ -27,6 +27,7 @@ public class ReplyDao {
 				Reply bean = new Reply();
 				bean.setNo(rs.getInt("no"));
 				bean.setContent(rs.getString("content"));
+				bean.setRef(rs.getInt("ref"));
 				bean.setName(rs.getString("name"));
 				bean.setRdate(rs.getString("rdate"));
 				alist.add(bean);

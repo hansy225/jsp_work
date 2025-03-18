@@ -51,7 +51,7 @@
 						 		+ "	<td>" + list[i].rdate.substring(0,10) + "</td>"
 						 		+ "</tr>";	 
 					 }
-					 $('#table tbody').html(value);
+					 $('#output1 tbody').html(value);
 				},
 				error: function() {
 					console.log("ajax통신 실패");
@@ -82,7 +82,6 @@
 			})
 		})
 	</script>
-
 
 </body>
 </html>
